@@ -96,9 +96,9 @@ resource "azurerm_network_interface" "example" {
     name                          = "internal"
     subnet_id                     = aviatrix_vpc.default[0].subnets[2].subnet_id
     private_ip_address_allocation = "Dynamic"
-    public_ip_address_id = azurerm_public_ip.example.id
+    public_ip_address_id          = azurerm_public_ip.example.id
 
-    
+
   }
 }
 
@@ -106,21 +106,21 @@ resource "azurerm_public_ip" "example" {
   name                = "EskimooPublicIp1"
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
-  
-  allocation_method   = "Dynamic"
 
-  }
+  allocation_method = "Dynamic"
+
+}
 
 
 resource "azurerm_linux_virtual_machine" "example" {
   name                = "EskimooTest"
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
- 
-  size                = "Standard_F2"
+
+  size                            = "Standard_F2"
   disable_password_authentication = false
-  admin_username      = "adminuser"
-  admin_password = "Password123!"
+  admin_username                  = "adminuser"
+  admin_password                  = "Password123!"
   network_interface_ids = [
     azurerm_network_interface.example.id,
   ]

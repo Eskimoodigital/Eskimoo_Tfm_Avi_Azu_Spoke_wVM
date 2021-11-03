@@ -4,7 +4,7 @@ terraform {
       source = "aviatrixsystems/aviatrix"
     }
     azurerm = {
-      source = "hashicorp/azurerm"
+      source  = "hashicorp/azurerm"
       version = "2.83.0"
     }
   }
