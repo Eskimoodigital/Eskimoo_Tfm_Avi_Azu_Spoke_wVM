@@ -1,3 +1,10 @@
+resource "azurerm_resource_group" "example" {
+  name     = "RGEskTfm"
+  location = "West Europe"
+}
+
+
+
 # Create an Azure VNet
 resource "aviatrix_vpc" "default" {
   count                = var.use_existing_vnet ? 0 : 1
@@ -71,10 +78,7 @@ resource "aviatrix_transit_firenet_policy" "default" {
 
 
 
-resource "azurerm_resource_group" "example" {
-  name     = "RGEskTfm"
-  location = "West Europe"
-}
+
 
 # resource "azurerm_network_interface" "example" {
 #   name                = "example-nic"
