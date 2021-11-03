@@ -108,7 +108,7 @@ resource "azurerm_public_ip" "example" {
   allocation_method   = "Dynamic"
 
   }
-}
+
 
 resource "azurerm_linux_virtual_machine" "example" {
   name                = "EskimooTest"
