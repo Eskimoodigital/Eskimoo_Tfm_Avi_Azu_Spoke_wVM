@@ -1,7 +1,8 @@
-# terraform-aviatrix-azure-spoke
+# terraform-aviatrix-azure-spoke (Eskimoo Edit)
 
 ### Description
 This module deploys a very simple spoke VNET.
+Eskimoo added a VM to be deployed at init.
 
 ### Compatibility
 Module version | Terraform version | Controller version | Terraform provider version
