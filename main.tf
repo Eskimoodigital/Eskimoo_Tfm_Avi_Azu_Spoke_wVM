@@ -1,7 +1,3 @@
-resource "azurerm_resource_group" "example" {
-  name     = "RGEskTfm"
-  location = "West Europe"
-}
 
 
 
@@ -79,6 +75,10 @@ resource "aviatrix_transit_firenet_policy" "default" {
 
 
 
+# resource "azurerm_resource_group" "example" {
+#   name     = "RGEskTfm"
+#   location = "West Europe"
+# }
 
 # resource "azurerm_network_interface" "example" {
 #   name                = "example-nic"
